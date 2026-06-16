@@ -6,37 +6,46 @@
     <title>Transfer Market Simulator</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background-color: #121212; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .card-role { cursor: pointer; transition: 0.3s; background-color: #1e1e1e; border: 2px solid #333; }
+        body { background-color: #0f111a; color: #e2e8f0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .card-role { cursor: pointer; transition: 0.3s; background-color: #161925; border: 2px solid #23293e; border-radius: 12px; }
         .card-role:hover { border-color: #00ff66; transform: translateY(-5px); }
-        .btn-submit { background-color: #00ff66; color: #000; font-weight: bold; }
+        .btn-submit { background-color: #00ff66; color: #000; font-weight: bold; border-radius: 8px; letter-spacing: 0.5px; }
         .btn-submit:hover { background-color: #00cc52; }
         input[type="radio"]:checked + label .card-role { border-color: #00ff66; background-color: #1a3a2a; }
+        .step-number { color: #00ff66; font-family: monospace; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <div class="container py-5">
     <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold">Transfer Market Simulator</h1>
-        <p class="lead text-muted">Build your career in the world of football transfers</p>
+        <h1 class="display-4 fw-bold text-white">TRANSFER MARKET SIMULATOR</h1>
+        <p class="lead text-muted">Navigate the multi-million dollar world of football business.</p>
     </div>
 
-    <form method="POST" class="max-width-700 mx-auto">
+    <form method="POST" class="max-width-700 mx-auto" style="max-width: 800px;">
+        
         <div class="mb-5 text-center">
-            <label for="nickname" class="form-label h4 mb-3">Enter Your Nickname</label>
-            <input type="text" class="form-control form-control-lg bg-dark text-white text-center border-secondary mx-auto" id="nickname" name="nickname" placeholder="e.g., Jorge Mendes" style="max-width: 400px;" required>
+            <h3 class="h5 text-uppercase mb-3"><span class="step-number">STEP 01.</span> Create Your Profile</h3>
+            <label for="nickname" class="form-label text-muted small mb-2">Enter the name you will use in negotiations and media headlines</label>
+            <input type="text" class="form-control form-control-lg bg-dark text-white text-center border-secondary mx-auto" id="nickname" name="nickname" placeholder="e.g., Mino Raiola / Florentino Perez" style="max-width: 450px;" required>
         </div>
 
-        <h4 class="text-center mb-4">Choose Your Path</h4>
+        <hr class="border-secondary my-5">
+
+        <div class="text-center mb-4">
+            <h3 class="h5 text-uppercase mb-1"><span class="step-number">STEP 02.</span> Choose Your Career Path</h3>
+            <p class="text-muted small">Every role features entirely unique mechanics, menus, and gameplay objectives.</p>
+        </div>
+
         <div class="row g-3 mb-5">
             
             <div class="col-md-6">
                 <input type="radio" name="role" value="player_agent" id="role_agent" class="btn-check" checked required>
                 <label class="w-100 h-100" for="role_agent">
-                    <div class="card card-role p-4 text-white h-100">
-                        <h5 class="card-title">⚽ Player Agent</h5>
-                        <p class="card-text text-muted small">Manage client careers, negotiate contracts, and close high-profile deals.</p>
+                    <div class="card card-role p-4 h-100">
+                        <h5 class="text-white mb-2">⚽ Player Agent</h5>
+                        <p class="text-muted small m-0">Pitch players to clubs, fight for massive contract commissions, and manage player egos when relations with managers turn sour.</p>
                     </div>
                 </label>
             </div>
@@ -44,9 +53,9 @@
             <div class="col-md-6">
                 <input type="radio" name="role" value="scout" id="role_scout" class="btn-check">
                 <label class="w-100 h-100" for="role_scout">
-                    <div class="card card-role p-4 text-white h-100">
-                        <h5 class="card-title">🔍 Scout</h5>
-                        <p class="card-text text-muted small">Discover hidden gems, analyze stats, and shape club transfer policies.</p>
+                    <div class="card card-role p-4 h-100">
+                        <h5 class="text-white mb-2">🔍 Talent Scout</h5>
+                        <p class="text-muted small m-0">Travel the globe to spot raw wonderkids. Build detailed data reports and compete with rival networks to sign prospects early.</p>
                     </div>
                 </label>
             </div>
@@ -54,9 +63,9 @@
             <div class="col-md-6">
                 <input type="radio" name="role" value="club_president" id="role_president" class="btn-check">
                 <label class="w-100 h-100" for="role_president">
-                    <div class="card card-role p-4 text-white h-100">
-                        <h5 class="card-title">🏆 Club President</h5>
-                        <p class="card-text text-muted small">Control massive budgets, authorize signings, and fight for silverware.</p>
+                    <div class="card card-role p-4 h-100">
+                        <h5 class="text-white mb-2">🏆 Club President</h5>
+                        <p class="text-muted small m-0">Hold the ultimate power. Manage the club's financial balance sheet, sign off on multi-million dollar bids, and hire/fire staff.</p>
                     </div>
                 </label>
             </div>
@@ -64,17 +73,17 @@
             <div class="col-md-6">
                 <input type="radio" name="role" value="head_coach" id="role_coach" class="btn-check">
                 <label class="w-100 h-100" for="role_coach">
-                    <div class="card card-role p-4 text-white h-100">
-                        <h5 class="card-title">🎯 Head Coach</h5>
-                        <p class="card-text text-muted small">Identify tactical squad holes and demand funding for your dream squad.</p>
+                    <div class="card card-role p-4 h-100">
+                        <h5 class="text-white mb-2">🎯 Head Coach</h5>
+                        <p class="text-muted small m-0">Design your tactical system, pinpoint weak positions on the pitch, and pressure the President to unlock transfer funds.</p>
                     </div>
                 </label>
             </div>
 
         </div>
 
-        <div class="text-center">
-            <button type="submit" class="btn btn-submit btn-lg px-5 py-3">Start Career</button>
+        <div class="text-center shadow">
+            <button type="submit" class="btn btn-submit btn-lg px-5 py-3 text-uppercase">Initialize Career Mode</button>
         </div>
     </form>
 </div>
