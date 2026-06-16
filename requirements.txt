@@ -1,0 +1,7 @@
+tms/
+├── app.py                  # The main Python backend (controls the logic)
+├── requirements.txt        # Lists the external libraries we need (Flask)
+├── templates/              # HTML files (the structure of our website)
+│   └── index.html          # The Role & Nickname selection page
+└── static/                 # CSS files (the styling/design of our website)
+    └── style.css
