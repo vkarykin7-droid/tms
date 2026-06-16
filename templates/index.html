@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Market Simulator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { background-color: #121212; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .card-role { cursor: pointer; transition: 0.3s; background-color: #1e1e1e; border: 2px solid #333; }
+        .card-role:hover { border-color: #00ff66; transform: translateY(-5px); }
+        .btn-submit { background-color: #00ff66; color: #000; font-weight: bold; }
+        .btn-submit:hover { background-color: #00cc52; }
+        input[type="radio"]:checked + label .card-role { border-color: #00ff66; background-color: #1a3a2a; }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Transfer Market Simulator</h1>
+        <p class="lead text-muted">Build your career in the world of football transfers</p>
+    </div>
+
+    <form method="POST" class="max-width-700 mx-auto">
+        <div class="mb-5 text-center">
+            <label for="nickname" class="form-label h4 mb-3">Enter Your Nickname</label>
+            <input type="text" class="form-control form-control-lg bg-dark text-white text-center border-secondary mx-auto" id="nickname" name="nickname" placeholder="e.g., Jorge Mendes" style="max-width: 400px;" required>
+        </div>
+
+        <h4 class="text-center mb-4">Choose Your Path</h4>
+        <div class="row g-3 mb-5">
+            
+            <div class="col-md-6">
+                <input type="radio" name="role" value="player_agent" id="role_agent" class="btn-check" checked required>
+                <label class="w-100 h-100" for="role_agent">
+                    <div class="card card-role p-4 text-white h-100">
+                        <h5 class="card-title">⚽ Player Agent</h5>
+                        <p class="card-text text-muted small">Manage client careers, negotiate contracts, and close high-profile deals.</p>
+                    </div>
+                </label>
+            </div>
+
+            <div class="col-md-6">
+                <input type="radio" name="role" value="scout" id="role_scout" class="btn-check">
+                <label class="w-100 h-100" for="role_scout">
+                    <div class="card card-role p-4 text-white h-100">
+                        <h5 class="card-title">🔍 Scout</h5>
+                        <p class="card-text text-muted small">Discover hidden gems, analyze stats, and shape club transfer policies.</p>
+                    </div>
+                </label>
+            </div>
+
+            <div class="col-md-6">
+                <input type="radio" name="role" value="club_president" id="role_president" class="btn-check">
+                <label class="w-100 h-100" for="role_president">
+                    <div class="card card-role p-4 text-white h-100">
+                        <h5 class="card-title">🏆 Club President</h5>
+                        <p class="card-text text-muted small">Control massive budgets, authorize signings, and fight for silverware.</p>
+                    </div>
+                </label>
+            </div>
+
+            <div class="col-md-6">
+                <input type="radio" name="role" value="head_coach" id="role_coach" class="btn-check">
+                <label class="w-100 h-100" for="role_coach">
+                    <div class="card card-role p-4 text-white h-100">
+                        <h5 class="card-title">🎯 Head Coach</h5>
+                        <p class="card-text text-muted small">Identify tactical squad holes and demand funding for your dream squad.</p>
+                    </div>
+                </label>
+            </div>
+
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-submit btn-lg px-5 py-3">Start Career</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
